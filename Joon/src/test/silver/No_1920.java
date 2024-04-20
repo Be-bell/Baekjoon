@@ -8,9 +8,13 @@ public class No_1920 {
 	static int BinarySearch(int[] arr, int first, int last, int num) {
 		int mid = (first+last)/2;
 		while(first<=last) {
-			if(num<arr[mid]) last = mid-1;
-			else if(num>arr[mid]) first = mid+1;
-			else return 1;
+			if(num<arr[mid]) {
+            last = mid-1;
+            } else if(num>arr[mid]) {
+            first = mid+1;
+			} else {
+            return 1;
+			}
 			mid = (first+last)/2;
 		}
 		return 0;
@@ -38,6 +42,4 @@ public class No_1920 {
 		bw.flush();
 		bw.close();
 	}
-	
-
 }
